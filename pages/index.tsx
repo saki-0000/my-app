@@ -8,6 +8,10 @@ type Post = {
   frontMatter: any;
 };
 
+interface Props {
+  posts: Post[];
+}
+
 export const getStaticProps = () => {
   const files = fs.readdirSync("posts");
   const posts: Post[] = files.map((fileName) => {
@@ -35,7 +39,7 @@ export const getStaticProps = () => {
   };
 };
 
-const Home: NextPage = ({ posts }) => {
+const Home: NextPage<Props> = ({ posts }) => {
   return (
     <div className="my-8">
       <h1>ユーザー名の記事一覧</h1>

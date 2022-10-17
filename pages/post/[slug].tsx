@@ -53,7 +53,17 @@ export async function getStaticPaths() {
   };
 }
 
-const Post: NextPage = ({ frontMatter, content, slug }) => {
+interface Props {
+  frontMatter: any;
+  content: string;
+  slug: string;
+}
+
+const Post: NextPage<Props> = ({
+  frontMatter,
+  content,
+  slug,
+}) => {
   return (
     <div>
       <NextSeo
