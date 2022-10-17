@@ -43,7 +43,7 @@ export async function getStaticProps({ params }) {
   };
 }
 
-const Post: NextPage = ({ post }) => {
+const Post: NextPage<any> = ({ post }) => {
   const router = useRouter();
 
   if (router.isFallback) {
