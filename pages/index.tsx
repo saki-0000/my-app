@@ -5,7 +5,7 @@ import PostCard from "../components/PostCard";
 
 type Post = {
   slug: string;
-  frontMatter: Object;
+  frontMatter: any;
 };
 
 export const getStaticProps = () => {
