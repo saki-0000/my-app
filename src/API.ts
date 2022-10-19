@@ -66,7 +66,6 @@ export type Post = {
   description?: string | null,
   createdAt: string,
   updatedAt: string,
-  owner?: string | null,
 };
 
 export type UpdatePostInput = {
@@ -126,7 +125,6 @@ export type CreatePostMutation = {
     description?: string | null,
     createdAt: string,
     updatedAt: string,
-    owner?: string | null,
   } | null,
 };
 
@@ -144,7 +142,6 @@ export type UpdatePostMutation = {
     description?: string | null,
     createdAt: string,
     updatedAt: string,
-    owner?: string | null,
   } | null,
 };
 
@@ -162,7 +159,6 @@ export type DeletePostMutation = {
     description?: string | null,
     createdAt: string,
     updatedAt: string,
-    owner?: string | null,
   } | null,
 };
 
@@ -179,7 +175,6 @@ export type GetPostQuery = {
     description?: string | null,
     createdAt: string,
     updatedAt: string,
-    owner?: string | null,
   } | null,
 };
 
@@ -200,14 +195,9 @@ export type ListPostsQuery = {
       description?: string | null,
       createdAt: string,
       updatedAt: string,
-      owner?: string | null,
     } | null >,
     nextToken?: string | null,
   } | null,
-};
-
-export type OnCreatePostSubscriptionVariables = {
-  owner?: string | null,
 };
 
 export type OnCreatePostSubscription = {
@@ -219,12 +209,7 @@ export type OnCreatePostSubscription = {
     description?: string | null,
     createdAt: string,
     updatedAt: string,
-    owner?: string | null,
   } | null,
-};
-
-export type OnUpdatePostSubscriptionVariables = {
-  owner?: string | null,
 };
 
 export type OnUpdatePostSubscription = {
@@ -236,12 +221,7 @@ export type OnUpdatePostSubscription = {
     description?: string | null,
     createdAt: string,
     updatedAt: string,
-    owner?: string | null,
   } | null,
-};
-
-export type OnDeletePostSubscriptionVariables = {
-  owner?: string | null,
 };
 
 export type OnDeletePostSubscription = {
@@ -253,6 +233,5 @@ export type OnDeletePostSubscription = {
     description?: string | null,
     createdAt: string,
     updatedAt: string,
-    owner?: string | null,
   } | null,
 };
